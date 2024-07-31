@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:repons_admin_dash/models/drower_item_model.dart';
+import 'package:repons_admin_dash/models/user_info_model.dart';
 import 'package:repons_admin_dash/utils/app_images.dart';
 import 'package:repons_admin_dash/widgets/custom_drower_item.dart';
-import 'package:repons_admin_dash/widgets/custom_list_tile_drower.dart';
+import 'package:repons_admin_dash/widgets/custom_list_tile_drower_header.dart';
 import 'package:repons_admin_dash/widgets/drower_item_list_view.dart';
 
 class CustomDrower extends StatelessWidget {
@@ -15,10 +16,12 @@ class CustomDrower extends StatelessWidget {
       child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: CustemListTileDrower(
-              image: Assets.imagesAvatar3,
-              title: "Lekan Okeowo",
-              subTile: "demo@gmail.com",
+            child: CustemListTileDrowerHeader(
+              userInfoModel: UserInfoModel(
+                image: Assets.imagesAvatar3,
+                title: "Lekan Okeowo",
+                subTitle: "demo@gmail.com",
+              ),
             ),
           ),
           SliverToBoxAdapter(
