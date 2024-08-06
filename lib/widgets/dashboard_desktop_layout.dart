@@ -18,12 +18,16 @@ class DashboardDesktopLayout extends StatelessWidget {
         children: [
           // firest section
           Expanded(child: CustomDrower()),
+
+          // add some size
           SizedBox(width: 32),
+
           // second section
           Expanded(
             flex: 3,
             child: CustomScrollView(
               slivers: [
+                // to build all widgets
                 SliverFillRemaining(
                   hasScrollBody: false,
                   child: Row(
@@ -32,22 +36,36 @@ class DashboardDesktopLayout extends StatelessWidget {
                         flex: 2,
                         child: Column(
                           children: [
+                            // add some size
                             SizedBox(height: 40),
+
                             AllExpenses(),
+
+                            // add some size
                             SizedBox(height: 24),
+
                             QuickInvoice(),
                           ],
                         ),
                       ),
+
+                      // add some size
                       SizedBox(width: 24),
+
                       // third section
                       Expanded(
                         child: Column(
                           children: [
+                            // add some size
                             SizedBox(height: 40),
+
                             MyCardSectionAndTransaction(),
+
+                            // add some size
                             SizedBox(height: 24),
-                            Expanded(child: IncomeSection()),
+
+                            
+                            Expanded(child: IncomSectionChart()),
                           ],
                         ),
                       ),
@@ -69,11 +87,12 @@ class IncomSectionChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomContainer(
-        child: Column(
-      children: [
-        CustomAllExpensesHeader(titel: "Income"),
-        IncomeSection()
-      ],
-    ));
+      child: Column(
+        children: [
+          CustomAllExpensesHeader(titel: "Income"),
+          IncomeSection(),
+        ],
+      ),
+    );
   }
 }

@@ -44,7 +44,7 @@ class _DrowerItemsListViewState extends State<DrowerItemsListView> {
     return SliverList.builder(
       itemCount: items.length,
       // shrinkWrap: true,
-      // physics: const NeverScrollableScrollPhysics(),
+      // physics: const NeverScrollableScrollPhysics(),  // for sliver fill remainig
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {

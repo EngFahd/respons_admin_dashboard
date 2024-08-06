@@ -25,37 +25,36 @@ class CustomDrower extends StatelessWidget {
               ),
             ),
           ),
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 8,
-            ),
-          ),
+
+          // add size
+          SliverToBoxAdapter(child: SizedBox(height: 8)),
+
           DrowerItemsListView(),
+
           SliverFillRemaining(
             // important
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(
-                  child: SizedBox(
-                    height: 20,
-                  ),
-                ),
+                // add some size
+                Expanded(child: SizedBox(height: 20)),
+
                 InActiveItem(
                   drowerItemModel: DrowerItemModel(
                     title: "Settings",
                     image: Assets.imagesSettings,
                   ),
                 ),
+                
                 InActiveItem(
                   drowerItemModel: DrowerItemModel(
                     title: "Logout account",
                     image: Assets.imagesLogout,
                   ),
                 ),
-                SizedBox(
-                  height: 48,
-                ),
+
+                // add some size
+                SizedBox(height: 48)
               ],
             ),
           ),

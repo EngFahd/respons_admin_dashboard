@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:repons_admin_dash/utils/size_config.dart';
 import 'package:repons_admin_dash/widgets/adaptive_layout.dart';
 import 'package:repons_admin_dash/widgets/custom_drower.dart';
@@ -24,12 +25,13 @@ class _AdminDashboardState extends State<AdminDashboard> {
           ? AppBar(
               elevation: 0,
               leading: IconButton(
-                  onPressed: () {
-                    scaffoldGlobalKey.currentState!.openDrawer();
-                  },
-                  icon: const Icon(Icons.menu)),
-              backgroundColor: const Color(0xffF7F9FA),
-            )
+                padding: EdgeInsets.zero,
+                onPressed: () {
+                  scaffoldGlobalKey.currentState!.openDrawer();
+                },
+                icon: const Icon(Icons.menu),
+              ),
+              backgroundColor: const Color(0xffF7F9FA))
           : null,
       drawer:
           MediaQuery.sizeOf(context).width < 800 ? const CustomDrower() : null,

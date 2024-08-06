@@ -1,9 +1,5 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:repons_admin_dash/models/income_detailes_model.dart';
-import 'package:repons_admin_dash/utils/app_styles.dart';
-import 'package:repons_admin_dash/widgets/all_expenses_header.dart';
-import 'package:repons_admin_dash/widgets/custom_container.dart';
 import 'package:repons_admin_dash/widgets/incom_detaiels.dart';
 
 class IncomeSection extends StatefulWidget {
@@ -18,7 +14,7 @@ int activeIndex = -1;
 class _IncomeSectionState extends State<IncomeSection> {
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.sizeOf(context).width;
+    // var width = MediaQuery.sizeOf(context).width;
     return
         // width >= 1200 && width < 1750
         //     ? const SizedBox()

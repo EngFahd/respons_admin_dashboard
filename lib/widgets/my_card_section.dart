@@ -32,12 +32,23 @@ class _MyCardSectionState extends State<MyCardSectionAndTransaction> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("My card", style: AppStyles.styleSemiBold20(context)),
+
+        // add some space
         const SizedBox(height: 20),
+
         MyCardPageView(pageController: pageController),
+
+        // add some space
         const SizedBox(height: 20),
+
         DotIndicator(currentPageIndex: currentPage),
+
+        // add some space
         // const SizedBox(height: 20),
+
+        // line
         const Divider(height: 40, color: Color(0xffF1F1F1)),
+
         const TransactionHistory(),
       ],
     ));
