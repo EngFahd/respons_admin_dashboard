@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:repons_admin_dash/models/all_expenses_item_model.dart';
-import 'package:repons_admin_dash/utils/app_colors.dart';
+import 'package:repons_admin_dash/utils/app_styles.dart';
 
 class InActiveAllExpensesItem extends StatelessWidget {
   const InActiveAllExpensesItem({
@@ -28,15 +28,25 @@ class InActiveAllExpensesItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: const EdgeInsets.all(14),
-                decoration: const ShapeDecoration(
-                  shape: OvalBorder(),
-                  color: Color(0xfffafafa),
-                ),
-                child: SvgPicture.asset(
-                  allExpensesItemModel.icon,
-                  // color: const Color(0xff4EB7F2),
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 60),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Container(
+                      // padding: const EdgeInsets.all(14),
+                      decoration: const ShapeDecoration(
+                        shape: OvalBorder(),
+                        color: Color(0xfffafafa),
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          allExpensesItemModel.icon,
+                          // color: const Color(0xff4EB7F2),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
               // const Spacer(), s
@@ -52,23 +62,32 @@ class InActiveAllExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyles.styleMedium16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.styleMedium16(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesItemModel.prise,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.prise,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),
@@ -105,20 +124,30 @@ class ActiveAllExpensesItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               // icon Container
-              Container(
-                padding: const EdgeInsets.all(14),
-                decoration: ShapeDecoration(
-                  shape: const OvalBorder(),
-                  color: Colors.white.withOpacity(0.1),
-                ),
-                // svg color
-                child: SvgPicture.asset(
-                  allExpensesItemModel.icon,
-                  colorFilter: const ColorFilter.mode(
-                      Color(0xffFFFFFF), BlendMode.srcIn),
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxHeight: 60),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Container(
+                      // padding: const EdgeInsets.all(14),
+                      decoration: ShapeDecoration(
+                        shape: const OvalBorder(),
+                        color: Colors.white.withOpacity(0.1),
+                      ),
+                      // svg color
+                      child: Center(
+                        child: SvgPicture.asset(
+                          allExpensesItemModel.icon,
+                          colorFilter: const ColorFilter.mode(
+                              Color(0xffFFFFFF), BlendMode.srcIn),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              // const Spacer(), 
+              // const Spacer(),
               Transform.rotate(
                 angle: -1.57079633 * 2,
                 child: const Icon(
@@ -131,26 +160,35 @@ class ActiveAllExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyles.styleMedium16(context)
-                .copyWith(color: const Color(0xFFFFFFFF)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.styleMedium16(context)
+                  .copyWith(color: const Color(0xFFFFFFFF)),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyles.styleRegular14(context)
-                .copyWith(color: const Color(0xffFAFAFA)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.styleRegular14(context)
+                  .copyWith(color: const Color(0xffFAFAFA)),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesItemModel.prise,
-            style: AppStyles.styleSemiBold24(context)
-                .copyWith(color: const Color(0xffFFFFFF)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.prise,
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: const Color(0xffFFFFFF)),
+            ),
           ),
         ],
       ),

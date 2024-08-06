@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:repons_admin_dash/utils/app_colors.dart';
+import 'package:repons_admin_dash/utils/app_styles.dart';
 import 'package:repons_admin_dash/widgets/custom_container.dart';
 import 'package:repons_admin_dash/widgets/quick_invoice_form.dart';
 import 'package:repons_admin_dash/widgets/quick_invoice_header.dart';

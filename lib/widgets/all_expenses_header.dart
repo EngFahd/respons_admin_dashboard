@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:repons_admin_dash/utils/app_colors.dart';
+import 'package:repons_admin_dash/utils/app_styles.dart';
 
-class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader({
-    super.key,
+class CustomAllExpensesHeader extends StatelessWidget {
+  const CustomAllExpensesHeader({
+    super.key, required this.titel,
   });
-
+  final String titel;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "All Expenses",
+          titel,
           style: AppStyles.styleSemiBold20(context),
         ),
         Container(

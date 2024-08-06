@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:repons_admin_dash/utils/app_colors.dart';
+import 'package:repons_admin_dash/utils/app_styles.dart';
 import 'package:repons_admin_dash/widgets/custom_container.dart';
 import 'package:repons_admin_dash/widgets/custom_dot_indicator.dart';
 import 'package:repons_admin_dash/widgets/my_card.dart';
 import 'package:repons_admin_dash/widgets/transaction_history.dart';
 
-class MyCardSection extends StatefulWidget {
-  const MyCardSection({super.key});
+class MyCardSectionAndTransaction extends StatefulWidget {
+  const MyCardSectionAndTransaction({super.key});
 
   @override
-  State<MyCardSection> createState() => _MyCardSectionState();
+  State<MyCardSectionAndTransaction> createState() => _MyCardSectionState();
 }
 
-class _MyCardSectionState extends State<MyCardSection> {
+class _MyCardSectionState extends State<MyCardSectionAndTransaction> {
   late PageController pageController;
   int currentPage = 0;
   @override

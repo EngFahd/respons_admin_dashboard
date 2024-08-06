@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:repons_admin_dash/models/user_info_model.dart';
-import 'package:repons_admin_dash/utils/app_colors.dart';
+import 'package:repons_admin_dash/utils/app_styles.dart';
 
 class CustemListTileDrowerHeader extends StatelessWidget {
   const CustemListTileDrowerHeader({

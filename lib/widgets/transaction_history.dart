@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:repons_admin_dash/utils/app_colors.dart';
+import 'package:repons_admin_dash/utils/app_styles.dart';
 import 'package:repons_admin_dash/widgets/transaction_history_list_view.dart';
 
 class TransactionHistory extends StatelessWidget {

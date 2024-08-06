@@ -1,7 +1,7 @@
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:repons_admin_dash/utils/app_colors.dart';
+import 'package:repons_admin_dash/utils/app_styles.dart';
 import 'package:repons_admin_dash/utils/app_images.dart';
 
 class MyCard extends StatelessWidget {
@@ -42,7 +42,7 @@ class MyCard extends StatelessWidget {
             ),
             const Expanded(child: SizedBox()),
             Padding(
-              padding: const EdgeInsets.only(bottom: 27, right: 24),
+              padding: const EdgeInsets.only(right: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
@@ -59,6 +59,7 @@ class MyCard extends StatelessWidget {
                 ],
               ),
             ),
+            const Flexible(child: SizedBox(height: 27))
           ],
         ),
       ),
@@ -68,7 +69,7 @@ class MyCard extends StatelessWidget {
 
 class MyCardPageView extends StatelessWidget {
   const MyCardPageView({super.key, required this.pageController});
-final PageController pageController;
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return ExpandablePageView(

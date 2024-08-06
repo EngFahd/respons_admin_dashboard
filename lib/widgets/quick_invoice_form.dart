@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:repons_admin_dash/utils/app_colors.dart';
+import 'package:repons_admin_dash/utils/app_styles.dart';
 import 'package:repons_admin_dash/widgets/custom_text_field.dart';
 
 class QuickInvoiceForm extends StatelessWidget {

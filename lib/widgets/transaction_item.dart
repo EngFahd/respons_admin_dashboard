@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:repons_admin_dash/models/transation_model.dart';
-import 'package:repons_admin_dash/utils/app_colors.dart';
+import 'package:repons_admin_dash/utils/app_styles.dart';
 
 class TransactionItem extends StatelessWidget {
   const TransactionItem({super.key, required this.transationModel});

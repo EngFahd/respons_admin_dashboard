@@ -17,4 +17,3 @@ class AllExpencesItem extends StatelessWidget {
         : InActiveAllExpensesItem(allExpensesItemModel: allExpensesItemModel);
   }
 }
-

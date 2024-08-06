@@ -48,14 +48,9 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
                 });
               }
             },
-            child: Padding(
-              padding: index == 1
-                  ? const EdgeInsets.symmetric(horizontal: 12)
-                  : EdgeInsets.zero,
-              child: AllExpencesItem(
-                isSelected: selectedIndex == index,
-                allExpensesItemModel: item,
-              ),
+            child: AllExpencesItem(
+              isSelected: selectedIndex == index,
+              allExpensesItemModel: item,
             ),
           ),
         );
